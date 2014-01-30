@@ -1,0 +1,17 @@
+This software is intended to submit the "searching for offset" or "merging" jobs on lxbatch.
+It is very simple and needs to be developed. Feel free to add anything useful.
+ 
+If you want to use that software it is necessary to:
+ - source /afs/cern.ch/sw/lcg/external/gcc/4.4.3/x86_64-slc5-gcc43-opt/setup.sh
+ - source /afs/cern.ch/sw/lcg/app/releases/ROOT/5.26.00a/x86_64-slc5-gcc43-opt/root/bin/thisroot.sh
+ - compile the CMSTotem software with this gcc and root versions
+The same gcc and root is then sourced on lxbatch. (It's due to some compiler issues on lxbatch)
+
+To generate a script that will allow you to submit jobs on lxbatch:
+ - adjust setup.py
+ - run "python createScripts.py"
+ 
+To submit the jobs:
+ - go to directory "submit"
+ - type "./submit.sh"
+

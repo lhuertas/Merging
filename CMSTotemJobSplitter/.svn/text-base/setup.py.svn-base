@@ -1,0 +1,23 @@
+#directory where totem ntuples are stored, please put "rfio:directoryName" if it is on CASTOR
+totemDirectory = "rfio:/castor/cern.ch/totem/offline/Analysis/2012/Physics/RP_only,sr+hsx/"
+
+#directory where cms ntuples are stored, "rfio:directoryName" if it's on CASTOR
+cmsDirectory = "rfio:/castor/cern.ch/totem/offline/CMSTOTEM/CMSNtuples/HighBeta/"
+
+#the map contains the runs that are going to be merged
+#key - merged file name
+#value - [totemNtuple, cmsNtuple]
+files = {"8368_ntuple_merged_all.root" : ["8368_ntuple.root", "UABaseTree_CMS-TOTEM_LP_MinBias1_Run2012C-PromptReco-v1-HighBetaJuly2012-Run198901_uaBaseTree-v1_mergedTTree.root"]}
+
+#if the output directory is on CASTOR please set outputCastor = True
+outputCastor = False
+#a place where merged files will be stored
+outputDirectory = "/afs/cern.ch/work/j/jsmajek/merged_output/"
+
+#the path to the compiled program
+compiledProgramPath = "/afs/cern.ch/work/j/jsmajek/CMSTotem_original/Merge/combine"
+
+#the queue which will be used on lxbatch
+queueName = "2nd"
+
+
